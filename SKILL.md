@@ -1,6 +1,6 @@
 ---
 name: goofish-courseware-publisher
-description: Package interactive teaching HTML as truthful Xianyu listings, design covers, publish or replace authorized listings in the seller's browser, and verify the live result. Use for educational courseware sold on 闲鱼; not for managing buyer messages.
+description: 当用户要把互动教学 HTML 课件包装成闲鱼商品、制作封面和卖点文案，或在已登录浏览器中上架、换图、改价、批量替换并核验时使用；不用于买家消息管理。
 ---
 
 # 闲鱼互动课件上架
@@ -16,9 +16,10 @@ description: Package interactive teaching HTML as truthful Xianyu listings, desi
 
 ## 发布或替换
 
+- 在腾讯 WorkBuddy 中执行时，先加载 @references/workbuddy.md（[WorkBuddy 说明](references/workbuddy.md)）：确认实际可用的浏览器操控与文件上传能力，选用用户已登录闲鱼的浏览器。不同应用或浏览器的登录态不能互相假定。
 - 只在用户已授权该账号的对应商品操作时使用已登录的闲鱼浏览器。优先用可观察的浏览器 UI 操作；不读取、复制或导出 cookie，不绕过页面调用私有发布接口。保持用户正常使用电脑，优先后台标签页；遵守当前环境的桌面交互规则。
 - 首次发布：填图、标题、文案、分类、价格、交付与运送设置，核对后发布一次。替换已有商品：若页面没有编辑入口，先发布并核验新商品，再下架旧商品；不要先删除旧商品。详细的页面检查与故障恢复见 [references/web-publish.md](references/web-publish.md)。
-- 发布按钮点击后如响应不明，先查卖家商品列表和新商品链接，再决定是否重试；禁止盲目重复发布。任何批量任务逐件保存旧 ID、新 ID、状态和待处理事项，以便中断后从准确位置恢复。
+- 发布按钮点击后如响应不明，先查卖家商品列表和新商品链接，再决定是否重试；禁止盲目重复发布。批量任务把 [记录模板](templates/listing-ledger.csv) 复制到**当次任务工作空间**，逐件保存旧链接、新链接、状态和待处理事项，以便中断后恢复；不要把实际记录写回公开 Skill 目录。
 
 ## 完成标准
 
